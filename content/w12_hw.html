@@ -170,6 +170,48 @@ print (" (___)___")</pre>
 last_name  = "Shu"
 print (first_name)
 print (last_name)</pre>
+<p>第三題</p>
+<p>3:<a href="/get_page/Brython?src=https://gist.githubusercontent.com/41323231/7c07bfaa1dcf937b72b96710241a9489/raw/ddbbb5c23b9fb18b33fe226eb352c53953292677/3.py">解</a></p>
+<p>解釋語法:</p>
+<p>1.在programming_book設三個變數。</p>
+<p>2.列印programming_book變數。</p>
+<p>3.在設一個wanted_book的變數相當於input()的效果。</p>
+<p>4.列印wanted_book變數。</p>
+<p>5.會回傳變數如果有在programming_book裡的變數會顯示是我們有賣，反之是寫抱歉我們沒有賣。</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">programming_books = ["Learn python", "Python for all",  "Intro to python"]
+print (programming_books)
+wanted_book = input("Hi! What book would you like to buy?")
+print (wanted_book)
+if wanted_book in programming_books:
+    print ("Yes, we sell it!")
+else:
+    print ("Sorry, we don't sell that book")</pre>
+<p>4.<a href="/get_page/Brython?src=https://gist.githubusercontent.com/41323231/6f777c96015ea2fcd2ab21827b737d9e/raw/1a79a81cb635a1b510402768920d07d8ec01947f/4.py">解</a></p>
+<p>解釋語法:</p>
+<p>1.在shopping_list設三個變數。</p>
+<p>2.列印shopping_list變數。</p>
+<p>3.再設一個new_item的變數相當於input()的效果。</p>
+<p>4.毀回傳變數如果有再shopping_list裡會列出購物清單，反之不會。</p>
+<p>5.阿item_to_remove是想移除物品。</p>
+<p>6.如果移除物品是在清單會說移除清單，反之會寫不在清單。</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">shopping_list = ["carrots", "chocolate", "olives"]
+print (shopping_list)
+new_item = input("What else do I have to buy?")
+
+if new_item in shopping_list:
+    print (new_item + " is/are already in the shopping list")
+    print (shopping_list) 
+else:
+    shopping_list.append(new_item)
+    print (shopping_list)
+    item_to_remove = input("What do I have to remove?")
+
+if item_to_remove in shopping_list:
+    shopping_list.remove(item_to_remove)
+    print (shopping_list)
+else:
+    print (item_to_remove + " is/are not in the list")
+    print (shopping_list)</pre>
 <p></p><br />W13_hw << <a href='W13_hw.html'>Previous</a> <a href='HW 2.html'>Next</a> >> HW 2</div>
         
     <!-- footer -->
