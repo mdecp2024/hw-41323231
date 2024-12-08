@@ -228,7 +228,41 @@ if item_to_remove in shopping_list:
 else:
     print (item_to_remove + " is/are not in the list")
     print (shopping_list)</pre>
-<p></p><h1>HW 2</h1>
+<p>第五題</p>
+<p>5.<a href="/get_page/Brython?src=https://gist.githubusercontent.com/41323231/53f4c9121be0e89f879871018f31aab5/raw/325d1a2dbf5204e2c2ef6cce97cc99bab991ea2f/5.py">解</a></p>
+<p>解釋語法:</p>
+<p>1.todays_menu是變數。</p>
+<p>2.第二句是從今日菜單找半數排列第幾而第三句是列印菜單。</p>
+<p>3.第四句是移除回報變數中的選項第五句是列印出來。</p>
+<p>4.最後是把今日菜單多家入選項並列印出來。</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">todays_menu = [ "burger","salad" ,"coke"]
+side_dish_index = todays_menu.index("salad")
+print (side_dish_index)
+todays_menu.pop(side_dish_index)
+print (todays_menu)
+todays_menu.insert(side_dish_index, "fries")
+print (todays_menu)</pre>
+<p>第六題</p>
+<p>6.<a href="/get_page/Brython?src=https://gist.githubusercontent.com/41323231/c9370413957964a7fee1ce1fdb431a88/raw/6e6974211934835ef8a10d66a32f1836ea89624c/6.py">解</a></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">cities = ["San Diego", "Prague", "Cape Town", "Tokyo", "Melbourne"]
+print(cities)              # 印出整個列表
+print(cities[1])           # 印出索引為1的元素 (Prague)
+print(cities[1:4])         # 印出索引1到3的元素 ['Prague', 'Cape Town', 'Tokyo']
+print(cities[1:4:2])       # 印出索引1到3之間，步長為2的元素 ['Prague', 'Tokyo']
+print(cities[0:3])         # 印出索引0到2的元素 ['San Diego', 'Prague', 'Cape Town']
+print(cities[:3])          # 印出索引0到2的元素，省略start相當於從0開始 ['San Diego', 'Prague', 'Cape Town']
+print(cities[2:5])         # 印出索引2到4的元素 ['Cape Town', 'Tokyo', 'Melbourne']
+print(cities[2:])          # 印出索引2到最後的所有元素 ['Cape Town', 'Tokyo', 'Melbourne']
+print(cities[0:5:2])       # 印出索引0到4，步長為2的元素 ['San Diego', 'Cape Town', 'Melbourne']
+print(cities[::2])         # 印出步長為2的元素 ['San Diego', 'Cape Town', 'Melbourne']
+print(cities[4])           # 印出索引4的元素 (Melbourne)
+print(cities[-1])          # 印出最後一個元素 (Melbourne)
+print(cities[-4:-1])       # 印出倒數第4到倒數第2的元素 ['Prague', 'Cape Town', 'Tokyo']
+print(cities[3:0:-1])      # 印出從索引3到索引1的元素，步長為-1 ['Tokyo', 'Cape Town', 'Prague']
+print(cities[-2:-5:-1])    # 印出倒數第2到倒數第5的元素，步長為-1 ['Tokyo', 'Cape Town', 'Prague']
+print(cities[::-1])        # 印出整個列表反轉 ['Melbourne', 'Tokyo', 'Cape Town', 'Prague', 'San Diego']
+</pre>
+<p><br/><br/></p><h1>HW 2</h1>
 <h4>主題: Python 的數列、判斷式與重複迴圈 (20%)<span style="background-color: #ffff99;"><br/></span></h4>
 <p style="padding-left: 30px;">Python 課程教材: <a href="https://www.learnpythonwithjupyter.com/">https://www.learnpythonwithjupyter.com/</a> - PART 2 and Part 3</p>
 <hr/>

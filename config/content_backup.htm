@@ -204,11 +204,12 @@ else:
     print ("Sorry, we don't sell that book")</pre>
 <p>4.<a href="/get_page/Brython?src=https://gist.githubusercontent.com/41323231/6f777c96015ea2fcd2ab21827b737d9e/raw/1a79a81cb635a1b510402768920d07d8ec01947f/4.py">解</a></p>
 <p>解釋語法:</p>
-<p>1.在shopping_list設三個變數</p>
-<p>2.列印shopping_list變數</p>
-<p>3.再設一個new_item的變數相當於input()的效果</p>
-<p>4.毀回傳變數如果有再shopping_list裡會列出購物清單反之不會</p>
-<p>5.阿item_to_remove是想移除物品</p>
+<p>1.在shopping_list設三個變數。</p>
+<p>2.列印shopping_list變數。</p>
+<p>3.再設一個new_item的變數相當於input()的效果。</p>
+<p>4.毀回傳變數如果有再shopping_list裡會列出購物清單，反之不會。</p>
+<p>5.阿item_to_remove是想移除物品。</p>
+<p>6.如果移除物品是在清單會說移除清單，反之會寫不在清單。</p>
 <pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">shopping_list = ["carrots", "chocolate", "olives"]
 print (shopping_list)
 new_item = input("What else do I have to buy?")
@@ -227,6 +228,22 @@ if item_to_remove in shopping_list:
 else:
     print (item_to_remove + " is/are not in the list")
     print (shopping_list)</pre>
+<p>第五題</p>
+<p>5.<a href="/get_page/Brython?src=https://gist.githubusercontent.com/41323231/53f4c9121be0e89f879871018f31aab5/raw/325d1a2dbf5204e2c2ef6cce97cc99bab991ea2f/5.py">解</a></p>
+<p>解釋語法:</p>
+<p>1.todays_menu是變數。</p>
+<p>2.第二句是從今日菜單找半數排列第幾而第三句是列印菜單。</p>
+<p>3.第四句是移除回報變數中的選項第五句是列印出來。</p>
+<p>4.最後是把今日菜單多家入選項並列印出來。</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">todays_menu = [ "burger","salad" ,"coke"]
+side_dish_index = todays_menu.index("salad")
+print (side_dish_index)
+todays_menu.pop(side_dish_index)
+print (todays_menu)
+todays_menu.insert(side_dish_index, "fries")
+print (todays_menu)</pre>
+<p>第六題</p>
+<p>6.<a href="/get_page/Brython?src=https://gist.githubusercontent.com/41323231/c9370413957964a7fee1ce1fdb431a88/raw/6e6974211934835ef8a10d66a32f1836ea89624c/6.py">解</a></p>
 <p></p><h1>HW 2</h1>
 <h4>主題: Python 的數列、判斷式與重複迴圈 (20%)<span style="background-color: #ffff99;"><br/></span></h4>
 <p style="padding-left: 30px;">Python 課程教材: <a href="https://www.learnpythonwithjupyter.com/">https://www.learnpythonwithjupyter.com/</a> - PART 2 and Part 3</p>
