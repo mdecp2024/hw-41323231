@@ -120,6 +120,7 @@ ctx.beginPath()
 ctx.rect(second_top_left_x, second_top_left_y, square_size, square_size)
 ctx.stroke()</pre>
 <p><br/><br/>W13</p><h3>w13_hw</h3>
+<p>這是兩個正方形相交</p>
 <pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">from browser import html
 from browser import document as doc
  
@@ -157,7 +158,135 @@ second_top_left_y = canvas_center_y - square_size // 2
 ctx.beginPath()
 ctx.rect(second_top_left_x, second_top_left_y, square_size, square_size)
 ctx.stroke()</pre>
-<p></p><h3>w12_hw</h3>
+<p><a href="/get_page/Brython?src=https://gist.githubusercontent.com/41323231/73f4bdc7747f72433b726e2703d24f76/raw/e7f9e3045b10f1a5d27a694e23a75f09d1ea9a66/W131-2.py">這是多兩個圓並塗色</a></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">from browser import html
+from browser import document as doc
+import math
+ 
+canvas = html.CANVAS(width=500, height=500)
+brython_div = doc["brython_div1"]
+brython_div &lt;= canvas
+ 
+ctx = canvas.getContext("2d")
+ctx.lineWidth = 4
+
+#混色的
+ctx.globalCompositeOperation = "lighter"
+
+
+#黑邊圓*2(每個畫四個邊邊)
+ctx.strokeStyle = 'black'
+#第一個圓
+ctx.beginPath()
+ctx.arc(160, 160, 141, 0.25 * math.pi,0.75 * math.pi)
+ctx.fillStyle = "MistyRose"
+ctx.fill()
+ctx.stroke()
+
+ctx.beginPath()
+ctx.arc(160, 160, 141, 0.75 * math.pi,1.25 * math.pi)
+ctx.fillStyle = "OliveDrab"
+ctx.fill()
+ctx.stroke()
+
+ctx.beginPath()
+ctx.arc(160, 160, 141, 1.25 * math.pi,1.75 * math.pi)
+ctx.fillStyle = "Teal"
+ctx.fill()
+ctx.stroke()
+
+ctx.beginPath()
+ctx.arc(160, 160, 141, 1.75 * math.pi,0.25 * math.pi)
+ctx.fillStyle = "Fuchsia"
+ctx.fill()
+ctx.stroke()
+
+#第二個圓
+ctx.beginPath()
+ctx.arc(260, 260, 141, 1.25 * math.pi,1.75 * math.pi)
+ctx.fillStyle = "red"
+ctx.fill()
+ctx.stroke()
+
+ctx.beginPath()
+ctx.arc(260, 260, 141, 1.75 * math.pi,0.25 * math.pi)
+ctx.fillStyle = "Black"
+ctx.fill()
+ctx.stroke()
+
+ctx.beginPath()
+ctx.arc(260, 260, 141, 0.25 * math.pi,0.75 * math.pi)
+ctx.fillStyle = "Lightred"
+ctx.fill()
+ctx.stroke()
+
+ctx.beginPath()
+ctx.arc(260, 260, 141, 0.75 * math.pi,1.25 * math.pi)
+ctx.fillStyle = "blue"
+ctx.fill()
+ctx.stroke()
+
+
+#紅方形*2(4個三角形)
+ctx.strokeStyle = 'blue'
+ctx.beginPath()
+ctx.moveTo(60,60)
+ctx.lineTo(60,260)
+ctx.lineTo(260,260)
+ctx.fillStyle = "brown"
+ctx.fill()
+ctx.stroke()
+
+ctx.beginPath()
+ctx.moveTo(60,60)
+ctx.lineTo(260,60)
+ctx.lineTo(260,260)
+ctx.fillStyle = "red"
+ctx.fill()
+ctx.stroke()
+
+ctx.beginPath()
+ctx.moveTo(160,160)
+ctx.lineTo(360,160)
+ctx.lineTo(360,360)
+ctx.fillStyle = "purple"
+ctx.fill()
+ctx.stroke()
+
+ctx.beginPath()
+ctx.moveTo(160,160)
+ctx.lineTo(160,360)
+ctx.lineTo(360,360)
+ctx.fillStyle = "yellow"
+ctx.fill()
+ctx.stroke()
+
+ 
+#重疊的小方型
+ctx.beginPath()
+ctx.moveTo(160,160)
+ctx.lineTo(160,260)
+ctx.lineTo(260,260)
+ctx.fillStyle = "grey"
+ctx.fill()
+ctx.stroke()
+
+ctx.beginPath()
+ctx.moveTo(160,160)
+ctx.lineTo(260,160)
+ctx.lineTo(260,260)
+ctx.fillStyle = "green"
+ctx.fill()
+ctx.stroke()
+
+
+#籃斜線
+ctx.strokeStyle = 'pink'
+ctx.beginPath() 
+ctx.moveTo(60, 60)
+ctx.lineTo(360, 360)
+ctx.stroke()</pre>
+<p><br/><br/></p><h3>w12_hw</h3>
 <p>第一題</p>
 <p>1-1:<a href="/get_page/Brython?src=https://gist.githubusercontent.com/41323231/9f494e1371770212a1e4bd1319bc3605/raw/d5bf4a5aa0e2365631356dc87adc4cd063d4845c/1-1.py">解</a></p>
 <p>解釋語法:</p>
