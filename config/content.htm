@@ -400,6 +400,56 @@ upto = 100
 for i in range(init, upto+1):
     sum = sum + i
 print("從" + str(init) + "累加到" + str(upto) + "=" + str(sum))</pre>
+<p><a href="/get_page/Brython?src=https://gist.githubusercontent.com/41323231/73c8ef2fb42ba208abe62430237f5f3c/raw/4118563e37b4d7c90cf51d558ed320b01e29a86b/w15-2.py">addto</a></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false"># 定義 addto 函式
+def addto(init, upto):
+    # 初始化 sum 為 0
+    sum = 0
+    # 利用 for 迴圈進行累加
+    for i in range(init, upto + 1):
+        sum = sum + i
+    return sum
+ 
+# 主程式
+init = 1
+upto = 100
+# 呼叫 addto 函式
+result = addto(init, upto)
+print("從" + str(init) + "累加到" + str(upto) + "=" + str(result))</pre>
+<p><a href="/get_page/Brython?src=https://gist.githubusercontent.com/41323231/56b080062958757b5bbfe2717d72087d/raw/9c7fb879a0f242fef1d98824ccc5331d9439232a/w15-3.py"><span> </span><span>add_only_even </span></a></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">def addto(init, upto):
+    # 初始化 sum 為 0
+    sum = 0
+    # 利用 for 迴圈進行累加，只累加偶數
+    for i in range(init, upto + 1):
+        if i % 2 == 0:  # 如果 i 是偶數
+            sum = sum + i
+    return sum
+
+# 主程式
+init = 1
+upto = 100
+# 呼叫 addto 函式
+result = addto(init, upto)
+print("從" + str(init) + "累加到" + str(upto) + "的偶數總和是: " + str(result))</pre>
+<p><a href="/get_page/Brython?src=https://gist.githubusercontent.com/41323231/f9c4a515cdd17828bd4e0dc8b4f4156c/raw/1329705cd17a8e9472b345ee1e074868ac6c7aa4/w15-4.py">add_avoid_8</a></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">def add_avoid_8(init, upto):
+    # 初始化 sum 為 0
+    sum = 0
+    # 利用 for 迴圈進行累加
+    for i in range(init, upto + 1):
+        # 檢查數字是否包含 '8'
+        if '8' not in str(i):  # 如果 i 不包含 '8'
+            sum += i  # 累加該數字
+    return sum
+
+# 主程式
+init = 1
+upto = 100
+# 呼叫 add_avoid_8 函式
+result = add_avoid_8(init, upto)
+print(f"從{init}累加到{upto}的總和，避開包含'8'的數字是: {result}")
+</pre>
 <p></p><h1>HW 2</h1>
 <h4>主題: Python 的數列、判斷式與重複迴圈 (20%)<span style="background-color: #ffff99;"><br/></span></h4>
 <p style="padding-left: 30px;">Python 課程教材: <a href="https://www.learnpythonwithjupyter.com/">https://www.learnpythonwithjupyter.com/</a> - PART 2 and Part 3</p>
