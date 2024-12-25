@@ -141,23 +141,100 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">HW 1 Exam << <a href='HW 1 Exam.html'>Previous</a> <a href='Brython建立.html'>Next</a> >> Brython建立<br /><h1>w10</h1>
-<h4></h4>
-<h4><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/0utxDFRO41E?si=AEDeaFxC1bsNlB1q" title="YouTube video player" width="560"></iframe></h4>
-<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/ZG8bLgsrGHA?si=JJlu3pOlkI_Qex34" title="YouTube video player" width="560"></iframe></p>
-<p>這兩個影片分別都用五個不同的環境做同樣的是兩部影片唯一不同的是違反變數名導致無法執行。</p>
-<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/ajhZSGTE_ZY?si=JRCf-P1WRd5P25q2" title="YouTube video player" width="560"></iframe></p>
-<p>題讓我知道原來Brython也解題也是這題讓我更熟悉利用一些環境來操作這些程式。</p>
-<div id="tipue_search_content">
-<p>隞乩�𧢲䲮蝔见�誩�堒㫲�繧�鍂 <a href="https://www.mathjax.org/#gettingstarted">Mathjax Version 3 �聢撘�</a>.</p>
-<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-<h4>set1 - Physics</h4>
-<p><span style="background-color: #ccffcc;">Use python to solve the problem: A jet touches down at velocity 310 km/h. Find the constant acceleration required to stop the aircraft 1000 m down the runway.</span></p>
-<p style="padding-left: 30px;">To solve this problem, we'll use the kinematic equations of motion under constant acceleration. The question asks for the constant acceleration required to stop the jet after a certain distance, which means we are looking for the deceleration.</p>
-<p style="padding-left: 30px;">Step 1: Problem Breakdown</p>
-<p style="padding-left: 30px;">We are given:<br/>- Initial velocity \( v_0 = 310 \, \text{km/h} \)<br/>- Final velocity \( v = 0 \, \text{m/s} \) (since the jet stops)<br/>- Distance \( d = 1000 \, \text{m}...</p>
-</div>
-<p></p><br />HW 1 Exam << <a href='HW 1 Exam.html'>Previous</a> <a href='Brython建立.html'>Next</a> >> Brython建立</div>
+    <div id="tipue_search_content">HW 2 Exam << <a href='HW 2 Exam.html'>Previous</a> <a href='HW 3.html'>Next</a> >> HW 3<br /><h1>w16_exam1</h1>
+<p><a href="/get_page/Brython?src=https://gist.githubusercontent.com/41323231/fd11f0f42a319badb6b50b992055c575/raw/5a7e60753441f58673205cdc1d2ca16b94ef3d51/w16_exam1.py">圖形</a></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">from browser import document, html
+import math
+ 
+# 初始化 HTML，確保 canvas 元素存在
+def setup_canvas():
+    if not document.querySelector("#my_canvas"):
+        canvas = html.CANVAS(id="my_canvas", width=800, height=600)
+        document &lt;= canvas
+ 
+setup_canvas()
+
+# Set up canvas
+canvas = document["my_canvas"]
+ctx = canvas.getContext("2d")
+
+# Set origin (32, 31)
+origin_x, origin_y = 32, 31    #自己學號 修改
+
+# Draw X-axis
+ctx.beginPath()
+ctx.moveTo(origin_x, origin_y)
+ctx.lineTo(500, origin_y)
+ctx.strokeStyle = "black"
+ctx.lineWidth = 2
+ctx.stroke()
+
+# Draw Y-axis
+ctx.beginPath()
+ctx.moveTo(origin_x, origin_y)
+ctx.lineTo(origin_x, 300)
+ctx.stroke()
+
+# Label origin
+ctx.font = "12px Arial"
+ctx.fillStyle = "black"
+ctx.fillText("(32, 31)", origin_x + 5, origin_y - 5)
+
+# Draw shapes
+# Adjusted placement to fix alignment issue
+
+# Hexagon (Orange)
+hex_x, hex_y = 100, 100
+ctx.beginPath()
+for i in range(6):
+    angle = i * (2 * math.pi / 6)
+    x = hex_x + 30 * math.cos(angle)
+    y = hex_y + 30 * math.sin(angle)
+    if i == 0:
+        ctx.moveTo(x, y)
+    else:
+        ctx.lineTo(x, y)
+ctx.closePath()
+ctx.fillStyle = "orange"
+ctx.fill()
+
+# Diamond (Teal)
+ctx.beginPath()
+ctx.moveTo(160, 70)
+ctx.lineTo(180, 100)
+ctx.lineTo(160, 130)
+ctx.lineTo(140, 100)
+ctx.closePath()
+ctx.fillStyle = "teal"
+ctx.fill()
+
+# Triangle (Teal)
+ctx.beginPath()
+ctx.moveTo(165, 130)
+ctx.lineTo(205, 130)
+ctx.lineTo(185, 100)
+ctx.closePath()
+ctx.fillStyle = "blue"
+ctx.fill()
+
+# Circle (Pink)
+ctx.beginPath()
+ctx.arc(230, 100, 30, 0, 2 * math.pi)
+ctx.fillStyle = "pink"
+ctx.fill()
+
+# Square (Yellow)
+ctx.beginPath()
+ctx.rect(265, 75, 50, 50)
+ctx.fillStyle = "yellow"
+ctx.fill()
+
+# Rectangle (Blue)
+ctx.beginPath()
+ctx.rect(320, 90, 60, 20)
+ctx.fillStyle = "Blue"
+ctx.fill()</pre>
+<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/vKtjREzwX2s?si=STngLN-PCbkGD8Ux" title="YouTube video player" width="560"></iframe></p><br />HW 2 Exam << <a href='HW 2 Exam.html'>Previous</a> <a href='HW 3.html'>Next</a> >> HW 3</div>
         
     <!-- footer -->
       <div class="container">
